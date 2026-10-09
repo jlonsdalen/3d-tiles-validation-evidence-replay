@@ -1,0 +1,188 @@
+{
+  "schema": "cesium_v4_built_publication_manifest.v1",
+  "status": "INTERNAL_STANDALONE_CANDIDATE_NOT_PUBLISHED",
+  "proposed_repository_name": "3d-tiles-validation-evidence-replay",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 80,
+      "sha256": "74e37e42790d5dc85a72621a9cad280f1f13ca53951dd10dff047c31d8268f34"
+    },
+    {
+      "path": "bin/3d-tiles-evidence-replay.mjs",
+      "bytes": 1376,
+      "sha256": "f897db967625c3d3508552bd1094757d3fe3c876569ae50e666ca0d45089cb89"
+    },
+    {
+      "path": "COMPARISON.md",
+      "bytes": 2381,
+      "sha256": "e169d8f0a26af498ba17bd4edc3c435e72a50406c8a6bedb7497f89a24b92e29"
+    },
+    {
+      "path": "DEMO.md",
+      "bytes": 2225,
+      "sha256": "c8d2259c0cf04deecbd084130f791bfcf59b995bf18f01976694fefa3e09e82b"
+    },
+    {
+      "path": "DEPENDENCY_RISK_REVIEW.md",
+      "bytes": 1178,
+      "sha256": "a98bb25e61958f1c7aaf37d12d63bd4bcc064e4442cd20cc42e5e4fbb7a49318"
+    },
+    {
+      "path": "examples/captured-v4/report.md",
+      "bytes": 737,
+      "sha256": "12c89f145e5f4049d7e4ee210563e6696e69c12f753f9f7f9ef53215564cad4a"
+    },
+    {
+      "path": "examples/captured-v4/results.sarif",
+      "bytes": 4805,
+      "sha256": "6c686a2c8b0032a1edbd73b2499df37247621eca2909aaf4e830f721dd9d43c0"
+    },
+    {
+      "path": "examples/captured-v4/summary.json",
+      "bytes": 3109,
+      "sha256": "5caf7c18333f2989f225950f8a9c19461407a42b4843079af32856c2f0f4d5ce"
+    },
+    {
+      "path": "FIXTURES-LICENSE",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "fixtures/v4/binary-invalid/asset-manifest.v1.json",
+      "bytes": 749,
+      "sha256": "10e60904c6f223a7a8062bc28e591e25f0b73a33a28ce71b749d0d7d81d23e92"
+    },
+    {
+      "path": "fixtures/v4/binary-invalid/tile.gltf",
+      "bytes": 42,
+      "sha256": "4d7fcbf08c2666544758a588b756424c37090a3896c687895b2d8c677fabf75e"
+    },
+    {
+      "path": "fixtures/v4/binary-invalid/tileset.json",
+      "bytes": 236,
+      "sha256": "81beaefedc663de7deb1d722be26ff43fb2a347a947d848fe23d55f19fd10cb3"
+    },
+    {
+      "path": "fixtures/v4/fixture-suite.v1.json",
+      "bytes": 1133,
+      "sha256": "f7d44707778dc0a775c62f8405a325a8f3d79d61a468fb806996ebc261a281f4"
+    },
+    {
+      "path": "fixtures/v4/positive/asset-manifest.v1.json",
+      "bytes": 749,
+      "sha256": "37c61d0c44f03337b1de1959479529a660d6c7c555a61f8e9bf323ca436ce887"
+    },
+    {
+      "path": "fixtures/v4/positive/tile.gltf",
+      "bytes": 82,
+      "sha256": "c6f79853a441e15de9d97a39c3cab530516e28b040467372b5dc696b3762b0e6"
+    },
+    {
+      "path": "fixtures/v4/positive/tileset.json",
+      "bytes": 257,
+      "sha256": "ca16afa200ce7c902134b53841d794b24cec413ae0847b7720c12dc07ddc1e5d"
+    },
+    {
+      "path": "fixtures/v4/semantic-invalid/asset-manifest.v1.json",
+      "bytes": 749,
+      "sha256": "b923bd39f0e1d500b925d0f50c2c08c87668fd801a6a0d110a9ead77346ada82"
+    },
+    {
+      "path": "fixtures/v4/semantic-invalid/tile.gltf",
+      "bytes": 82,
+      "sha256": "c6f79853a441e15de9d97a39c3cab530516e28b040467372b5dc696b3762b0e6"
+    },
+    {
+      "path": "fixtures/v4/semantic-invalid/tileset.json",
+      "bytes": 236,
+      "sha256": "bc9d78faf2978c2be2e828b356ea4004c3687b4c5a493d0ed4fb32a867539ff3"
+    },
+    {
+      "path": "lib/proof-pack.mjs",
+      "bytes": 23697,
+      "sha256": "d61f505ffedae100b3c6371c7b5e6895c9e1901f6e9ee870cfc46cd02f855cdb"
+    },
+    {
+      "path": "lib/strict-json.mjs",
+      "bytes": 4834,
+      "sha256": "b8e6b22435abfe323df31c0750f1058a8693060874017b364ef932cb0345452e"
+    },
+    {
+      "path": "lib/upstream-evidence.mjs",
+      "bytes": 20509,
+      "sha256": "58b39045c84b0e1beead5287605e41ecd16f012b2d6fbd4bd7aa12b8e2288306"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 455,
+      "sha256": "523dd054e9b60ee50c0d5f4931c457f29169722be4c5205a90f71a7fcff25545"
+    },
+    {
+      "path": "package.json",
+      "bytes": 699,
+      "sha256": "d49991046190a27e47109703ba1b31dbca862e4cc0888a8e536ea6295b27c85a"
+    },
+    {
+      "path": "PROJECT_PLAN.md",
+      "bytes": 2986,
+      "sha256": "24c3994c1908abde37ff758f225d7493ed00f2034a2b4ce7a7e6e6497a8b073b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2719,
+      "sha256": "9b96417d81a458f6dc9c0dfd11abba64a70bf40fecfe918f0ac10d2229c19d5f"
+    },
+    {
+      "path": "scripts/inspect-demo.mjs",
+      "bytes": 1441,
+      "sha256": "ee3e84cbbaf24cbd6f1462b1ec784352e970edf79d03c884577ebe70259e6f71"
+    },
+    {
+      "path": "scripts/install-exact-validator-runtime.sh",
+      "bytes": 2845,
+      "sha256": "5984d01dae46ec0af18b5f45159e11794923d6efd83cf0568756a17175697625"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 941,
+      "sha256": "9f48fa44e0e5ff8f0ca28e83da4d53a5f1dc616655d145b6001dfe29ff4f8fe3"
+    },
+    {
+      "path": "tests/publication-readiness.test.mjs",
+      "bytes": 3459,
+      "sha256": "fb67a4ef6d13222021f8e083435007e788b07acf9204140c9eba3b3e24d1324d"
+    },
+    {
+      "path": "tests/upstream-evidence.test.mjs",
+      "bytes": 4417,
+      "sha256": "5f5d2a35098cae7bc40b57c9e06cca83283adb4c12843d2f39490fcff3734f57"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSE_REVIEW.md",
+      "bytes": 1143,
+      "sha256": "de6f8deb4f5eb6d0e35e77485d6ef83e30f085c32a23082d55bd0419a59a9012"
+    },
+    {
+      "path": "witness-lock/package-lock.json",
+      "bytes": 82760,
+      "sha256": "0122ee13b3adaca0c5aa48731bb0185cd73a2d32884c2ba0a9cd27dd04305da3"
+    },
+    {
+      "path": "witness-lock/package.json",
+      "bytes": 335,
+      "sha256": "9eb569c8e4c9bd95ac756fc622d5f8687d9e637ddf1828e7ee14bfaad7b34c01"
+    }
+  ],
+  "generated_files": [
+    "PUBLICATION-MANIFEST.json",
+    "RELEASE-CHECKSUMS.sha256"
+  ],
+  "publication_authorized": false,
+  "submission_authorized": false
+}

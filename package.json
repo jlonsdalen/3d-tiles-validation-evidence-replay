@@ -1,0 +1,19 @@
+{
+  "name": "3d-tiles-validation-evidence-replay-pack",
+  "version": "0.4.0",
+  "description": "Deterministic evidence and replay wrapper for the CesiumGS 3D Tiles Validator.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "3d-tiles-evidence-replay": "bin/3d-tiles-evidence-replay.mjs"
+  },
+  "scripts": {
+    "install:validator": "bash scripts/install-exact-validator-runtime.sh",
+    "test": "node --test tests/*.test.mjs",
+    "demo": "node bin/3d-tiles-evidence-replay.mjs --suite fixtures/v4/fixture-suite.v1.json --validator-root witness-lock --out .demo-output",
+    "inspect": "node scripts/inspect-demo.mjs .demo-output"
+  },
+  "engines": {
+    "node": ">=22.0.0 <23"
+  }
+}

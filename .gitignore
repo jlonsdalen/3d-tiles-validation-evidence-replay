@@ -1,0 +1,4 @@
+node_modules/
+witness-lock/node_modules/
+witness-lock/.npm-cache/
+.demo-output/

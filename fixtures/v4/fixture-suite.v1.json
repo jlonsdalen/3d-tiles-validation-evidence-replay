@@ -1,0 +1,31 @@
+{
+  "schema": "cesium_validation_evidence_fixture_suite.v1",
+  "license_expression": "CC0-1.0",
+  "provenance": "AUTHORED_SYNTHETIC_FIXTURES",
+  "fixtures": [
+    {
+      "id": "binary-invalid",
+      "manifest": "binary-invalid/asset-manifest.v1.json",
+      "expected_result": "FAIL",
+      "required_issue_types": ["CONTENT_VALIDATION_ERROR"],
+      "required_issue_paths": ["/asset/version"],
+      "purpose": "Prove that the Cesium validator's embedded Khronos glTF validator rejects a glTF 1.0 asset."
+    },
+    {
+      "id": "positive",
+      "manifest": "positive/asset-manifest.v1.json",
+      "expected_result": "PASS",
+      "required_issue_types": [],
+      "required_issue_paths": [],
+      "purpose": "Prove a minimal local 3D Tiles 1.1 tileset with glTF 2.0 content passes."
+    },
+    {
+      "id": "semantic-invalid",
+      "manifest": "semantic-invalid/asset-manifest.v1.json",
+      "expected_result": "FAIL",
+      "required_issue_types": ["TILE_REFINE_MISSING_IN_ROOT"],
+      "required_issue_paths": ["/root"],
+      "purpose": "Prove a tileset-level semantic failure when root refine is omitted."
+    }
+  ]
+}

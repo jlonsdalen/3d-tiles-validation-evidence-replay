@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fixtures/v4/binary-invalid/tileset.json"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "tile.gltf"
+                  }
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "tile.gltf caused validation errors"
+          },
+          "properties": {
+            "fixture_id": "binary-invalid",
+            "ordinal": "0",
+            "upstream_path": "tile.gltf"
+          },
+          "ruleId": "CONTENT_VALIDATION_ERROR"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fixtures/v4/binary-invalid/tileset.json"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "tile.gltf"
+                  }
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Content tile.gltf caused validation errors"
+          },
+          "properties": {
+            "fixture_id": "binary-invalid",
+            "ordinal": "0.0",
+            "upstream_path": "tile.gltf"
+          },
+          "ruleId": "CONTENT_VALIDATION_ERROR"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fixtures/v4/binary-invalid/tileset.json"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "/asset/version"
+                  }
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unknown glTF major asset version: 1."
+          },
+          "properties": {
+            "fixture_id": "binary-invalid",
+            "ordinal": "0.0.0",
+            "upstream_path": "/asset/version"
+          },
+          "ruleId": "CONTENT_VALIDATION_ERROR"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fixtures/v4/semantic-invalid/tileset.json"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "/root"
+                  }
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "The 'refine' property must be set in root tiles"
+          },
+          "properties": {
+            "fixture_id": "semantic-invalid",
+            "ordinal": "0",
+            "upstream_path": "/root"
+          },
+          "ruleId": "TILE_REFINE_MISSING_IN_ROOT"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "informationUri": "https://github.com/CesiumGS/3d-tiles-validator",
+          "name": "3D Tiles Validation Evidence & Replay Pack",
+          "properties": {
+            "upstream": {
+              "embedded_gltf_adapter_sha256": "38c72fd87270a097fb77f538b30ecf0e6eddacae86cd1d758824a56881df9a59",
+              "embedded_gltf_validator": {
+                "name": "gltf-validator",
+                "version": "2.0.0-dev.3.10"
+              },
+              "gltf_package_json_sha256": "3578d16153fa237c72784588da2e8fcccc9cd3c1c58ef34c7912f0732d2f5fa6",
+              "package_json_sha256": "9eb569c8e4c9bd95ac756fc622d5f8687d9e637ddf1828e7ee14bfaad7b34c01",
+              "package_lock_sha256": "0122ee13b3adaca0c5aa48731bb0185cd73a2d32884c2ba0a9cd27dd04305da3",
+              "validator": {
+                "name": "3d-tiles-validator",
+                "version": "0.6.1"
+              },
+              "validator_entrypoint_sha256": "22649f1abd825f082d6e85474ff1ee937fae69b9fab6ea27bf67f86f5987a97d",
+              "validator_main_sha256": "a243b5994519a0eca197fbc15bb627a8df77e5771fed44cfb38dd96e7022ffef",
+              "validator_package_json_sha256": "1dbf0bb15f06b9233b7a18cf2b29038f17b38ceec0288844a3b472a482faedf6"
+            }
+          },
+          "rules": [
+            {
+              "id": "CONTENT_VALIDATION_ERROR",
+              "shortDescription": {
+                "text": "CONTENT VALIDATION ERROR"
+              }
+            },
+            {
+              "id": "TILE_REFINE_MISSING_IN_ROOT",
+              "shortDescription": {
+                "text": "TILE REFINE MISSING IN ROOT"
+              }
+            }
+          ],
+          "version": "0.4.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

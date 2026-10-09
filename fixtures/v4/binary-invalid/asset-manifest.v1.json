@@ -1,0 +1,26 @@
+{
+  "schema": "three_d_tiles_proof_pack_asset_manifest.v1",
+  "entry_tileset": "tileset.json",
+  "resources": [
+    {
+      "path": "tile.gltf",
+      "kind": "OPAQUE_CONTENT",
+      "bytes": 42,
+      "sha256": "4d7fcbf08c2666544758a588b756424c37090a3896c687895b2d8c677fabf75e",
+      "source": "AUTHORED_SYNTHETIC_FIXTURE",
+      "license_expression": "CC0-1.0",
+      "redistributable": true,
+      "synthetic": true
+    },
+    {
+      "path": "tileset.json",
+      "kind": "TILESET_JSON",
+      "bytes": 236,
+      "sha256": "81beaefedc663de7deb1d722be26ff43fb2a347a947d848fe23d55f19fd10cb3",
+      "source": "AUTHORED_SYNTHETIC_FIXTURE",
+      "license_expression": "CC0-1.0",
+      "redistributable": true,
+      "synthetic": true
+    }
+  ]
+}

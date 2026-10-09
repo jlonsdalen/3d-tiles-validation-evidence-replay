@@ -1,0 +1,86 @@
+{
+  "claim_boundary": {
+    "not_proven": [
+      "COMPLETE_3D_TILES_OR_GLTF_CONFORMANCE",
+      "RENDERING_GEOMETRIC_OR_SPATIAL_CORRECTNESS",
+      "CROSS_VIEWER_INTEROPERABILITY",
+      "OGC_CESIUM_OR_KHRONOS_CERTIFICATION",
+      "ADOPTION_PRODUCTION_SCALE_OR_EXTERNAL_VALIDATION",
+      "ZERO_EGRESS_WITHOUT_AN_EXTERNAL_OS_SANDBOX"
+    ],
+    "proven": [
+      "EXACT_LOCK_LOCAL_CESIUMGS_VALIDATOR_EXECUTION",
+      "EMBEDDED_KHRONOS_GLTF_VALIDATION_PATH",
+      "THREE_PROVENANCE_BOUND_FIXTURE_ORACLES",
+      "RAW_REPORT_BYTE_INTEGRITY_RECEIPTS",
+      "DETERMINISTIC_NORMALIZED_JSON_SARIF_MARKDOWN"
+    ]
+  },
+  "fixtures": 3,
+  "results": [
+    {
+      "counts": {
+        "errors": 1,
+        "infos": 0,
+        "warnings": 0
+      },
+      "expectation_matched": true,
+      "expected_result": "FAIL",
+      "fixture_id": "binary-invalid",
+      "normalized_sha256": "c299317b7c5034765c97650cf374fb7da64e58bd486c1e9254d30c428fcc3714",
+      "observed_result": "FAIL",
+      "schema": "cesium_validation_evidence_normalized_fixture.v1"
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "infos": 0,
+        "warnings": 0
+      },
+      "expectation_matched": true,
+      "expected_result": "PASS",
+      "fixture_id": "positive",
+      "normalized_sha256": "911457180a5985ae6b76d0aa2a1040448f6b630267c1db05354edcd07a7022bc",
+      "observed_result": "PASS",
+      "schema": "cesium_validation_evidence_normalized_fixture.v1"
+    },
+    {
+      "counts": {
+        "errors": 1,
+        "infos": 0,
+        "warnings": 0
+      },
+      "expectation_matched": true,
+      "expected_result": "FAIL",
+      "fixture_id": "semantic-invalid",
+      "normalized_sha256": "40a799beec05c9b014580d4ecf7de4526b51037b80324836dfbc8bf87d633ccf",
+      "observed_result": "FAIL",
+      "schema": "cesium_validation_evidence_normalized_fixture.v1"
+    }
+  ],
+  "schema": "cesium_validation_evidence_replay_summary.v1",
+  "status": "PASS_EXPECTATIONS",
+  "tool": {
+    "gltf_execution_path": "EMBEDDED_IN_CESIUMGS_3D_TILES_VALIDATOR",
+    "name": "3D Tiles Validation Evidence & Replay Pack",
+    "redundant_second_gltf_run": false,
+    "upstream": {
+      "embedded_gltf_adapter_sha256": "38c72fd87270a097fb77f538b30ecf0e6eddacae86cd1d758824a56881df9a59",
+      "embedded_gltf_validator": {
+        "name": "gltf-validator",
+        "version": "2.0.0-dev.3.10"
+      },
+      "gltf_package_json_sha256": "3578d16153fa237c72784588da2e8fcccc9cd3c1c58ef34c7912f0732d2f5fa6",
+      "package_json_sha256": "9eb569c8e4c9bd95ac756fc622d5f8687d9e637ddf1828e7ee14bfaad7b34c01",
+      "package_lock_sha256": "0122ee13b3adaca0c5aa48731bb0185cd73a2d32884c2ba0a9cd27dd04305da3",
+      "validator": {
+        "name": "3d-tiles-validator",
+        "version": "0.6.1"
+      },
+      "validator_entrypoint_sha256": "22649f1abd825f082d6e85474ff1ee937fae69b9fab6ea27bf67f86f5987a97d",
+      "validator_main_sha256": "a243b5994519a0eca197fbc15bb627a8df77e5771fed44cfb38dd96e7022ffef",
+      "validator_package_json_sha256": "1dbf0bb15f06b9233b7a18cf2b29038f17b38ceec0288844a3b472a482faedf6"
+    },
+    "version": "0.4.0"
+  }
+}

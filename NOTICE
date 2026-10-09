@@ -1,0 +1,9 @@
+3D Tiles Validation Evidence & Replay Pack
+Copyright 2026 Joshua Lonsdale
+
+This product includes software developed by Cesium GS, Inc. and Khronos Group
+contributors. Their validator packages remain separate upstream works and are
+installed from the exact npm lock; this project does not claim ownership of them.
+
+The synthetic fixtures under fixtures/v4 are dedicated under CC0-1.0. See
+FIXTURES-LICENSE and the provenance fields in each asset manifest.
