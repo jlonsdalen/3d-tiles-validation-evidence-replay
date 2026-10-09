@@ -53,6 +53,9 @@ Stop if installation integrity fails, node-gyp is requested, a test fails, the
 fixture vector changes, inspection fails, or the run exceeds the reviewer's time
 budget. Do not reinterpret a failed negative fixture as a failed demo: the two
 negative fixtures pass only when the expected upstream diagnostics are present.
+If the validator process itself exits nonzero, the wrapper retains its bounded
+stdout and stderr under `raw/`, writes a failure receipt under `integrity/`, and
+still exits nonzero without producing a summary or success claim.
 
 The demonstrated internal clean run completed installation and replay well under
 ten minutes, but network and host conditions vary. This is controlled-fixture

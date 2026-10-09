@@ -18,7 +18,7 @@ async function temporaryRoot(t) {
   return root;
 }
 
-async function createFakeValidator(t, {allPass = false} = {}) {
+async function createFakeValidator(t, {allPass = false, exitFailure = false} = {}) {
   const root = await temporaryRoot(t);
   await copyFile(path.join(packetRoot, "witness-lock", "package.json"), path.join(root, "package.json"));
   await copyFile(path.join(packetRoot, "witness-lock", "package-lock.json"), path.join(root, "package-lock.json"));
@@ -36,6 +36,13 @@ const path = require("node:path");
 const args = new Map();
 for (let i = 2; i < process.argv.length; i += 2) args.set(process.argv[i], process.argv[i + 1]);
 const id = path.basename(process.cwd());
+const controlledExitFailure = ${JSON.stringify(exitFailure)} && id === "binary-invalid";
+if (controlledExitFailure) {
+  fs.writeSync(1, "controlled failure stdout\\n");
+  fs.writeSync(2, "controlled failure stderr\\n");
+  process.exitCode = 17;
+}
+if (!controlledExitFailure) {
 let issues;
 if (!${JSON.stringify(allPass)} && id === "binary-invalid") {
   issues = [{type:"CONTENT_VALIDATION_ERROR",path:"tile.gltf",message:"tile.gltf caused validation errors",severity:"ERROR",causes:[{type:"CONTENT_VALIDATION_ERROR",path:"/asset/version",message:"Unknown glTF major asset version: 1.",severity:"ERROR"}]}];
@@ -46,6 +53,7 @@ const report = {date:String(process.hrtime.bigint()),numErrors:issues ? 1 : 0,nu
 if (issues) report.issues = issues;
 fs.writeFileSync(args.get("--reportFile"), JSON.stringify(report, null, 2));
 process.stdout.write("fake validator " + id + "\\n");
+}
 `;
   await writeFile(path.join(validatorRoot, "build", "main"), fakeSource);
   return root;
@@ -75,4 +83,29 @@ test("missing negative oracle evidence fails closed", async t => {
     runUpstreamEvidenceSuite({suitePath, validatorRoot, outputDirectory: path.join(outputRoot, "output")}),
     /required issue type absent/u,
   );
+});
+
+test("nonzero validator exit retains bounded diagnostics and never claims success", async t => {
+  const validatorRoot = await createFakeValidator(t, {exitFailure: true});
+  const outputRoot = await temporaryRoot(t);
+  const output = path.join(outputRoot, "output");
+  await assert.rejects(
+    runUpstreamEvidenceSuite({suitePath, validatorRoot, outputDirectory: output}),
+    /validator process failed: code=17 signal=none; diagnostics retained for fixture binary-invalid/u,
+  );
+  const stdout = await readFile(path.join(output, "raw", "binary-invalid.stdout.txt"));
+  const stderr = await readFile(path.join(output, "raw", "binary-invalid.stderr.txt"));
+  const receipt = JSON.parse(await readFile(path.join(output, "integrity", "binary-invalid.failure.json")));
+  assert.equal(stdout.toString("utf8"), "controlled failure stdout\n");
+  assert.equal(stderr.toString("utf8"), "controlled failure stderr\n");
+  assert.equal(receipt.schema, "cesium_validation_evidence_failed_execution_receipt.v1");
+  assert.equal(receipt.fixture_id, "binary-invalid");
+  assert.equal(receipt.exit_code, 17);
+  assert.equal(receipt.signal, null);
+  assert.equal(receipt.stdout.bytes, stdout.length);
+  assert.equal(receipt.stdout.sha256, sha256(stdout));
+  assert.equal(receipt.stderr.bytes, stderr.length);
+  assert.equal(receipt.stderr.sha256, sha256(stderr));
+  assert.equal(receipt.success_claimed, false);
+  await assert.rejects(readFile(path.join(output, "summary.json")), {code: "ENOENT"});
 });

@@ -20,8 +20,8 @@
     },
     {
       "path": "DEMO.md",
-      "bytes": 2225,
-      "sha256": "c8d2259c0cf04deecbd084130f791bfcf59b995bf18f01976694fefa3e09e82b"
+      "bytes": 2451,
+      "sha256": "adca759469c29d2d895392e36449c86b2a25915576374ae4f0e5fb73647a3618"
     },
     {
       "path": "DEPENDENCY_RISK_REVIEW.md",
@@ -110,8 +110,8 @@
     },
     {
       "path": "lib/upstream-evidence.mjs",
-      "bytes": 20509,
-      "sha256": "58b39045c84b0e1beead5287605e41ecd16f012b2d6fbd4bd7aa12b8e2288306"
+      "bytes": 21950,
+      "sha256": "c1655e3c9d1e0e49db871ebf50d1d98d90309e5fef6f8b52f07960779b612483"
     },
     {
       "path": "LICENSE",
@@ -160,8 +160,8 @@
     },
     {
       "path": "tests/upstream-evidence.test.mjs",
-      "bytes": 4417,
-      "sha256": "5f5d2a35098cae7bc40b57c9e06cca83283adb4c12843d2f39490fcff3734f57"
+      "bytes": 6205,
+      "sha256": "2890f43f234fb5f75fea4e90ce0dbe4411351645f3ce351e3061ff6569ff7ea1"
     },
     {
       "path": "THIRD_PARTY_LICENSE_REVIEW.md",
